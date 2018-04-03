@@ -7,6 +7,11 @@
 		<title>PWA Kata</title>
 		<meta name="description" content="PWA Kata">
 		<link href="/style.css" type="text/css" rel="stylesheet">
+		<link rel="manifest" href="/manifest.json">
+		<meta name="theme-color" content="#304ffe">
+		<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
 	</head>
 	<body>
 		<div class="grid">
@@ -32,9 +37,24 @@
 						</ul>
 						<button type="button" class="pwa-btn" data-test-btn="manifest">Test</button>
 					</div>
+					<div class="step" data-test-section>
+						<h2>Step Three - Link rel icon</h2>
+						<button type="button" class="pwa-btn" data-test-btn="manifest">Test</button>
+						</div>
 				</main>
 			</div>
 		</div>
 		<script src="/main.js"></script>
+		<script>
+			if('serviceWorker' in navigator) {
+				navigator.serviceWorker.register('/sw.js')
+					.then(function(reg) {
+						console.log('Service worker registered', reg);
+					})
+					.catch(function(err) {
+						console.log('Error registering service worker', err);
+					});
+			}
+		</script>
 	</body>
 </html>
