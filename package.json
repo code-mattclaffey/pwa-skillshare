@@ -1,0 +1,15 @@
+{
+  "name": "pwa-workshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "localhost ./"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "localhost": "^0.2.3"
+  }
+}
