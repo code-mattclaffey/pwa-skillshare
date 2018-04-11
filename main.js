@@ -2,8 +2,6 @@
 	'use strict';
 
 	const VISIBLE_STEP_CLASS = 'step--visible';
-	const VISIBLE_TEST_CLASS = 'tests--visible';
-	const TEST_ERROR = 'test__item--error';
 
 	const sections = Array.prototype.slice.call(document.querySelectorAll('[data-test-section]'))
 	let activeStep = sections[0];
@@ -91,7 +89,7 @@
 
 	const storage = localStorage.getItem('currentSection');
 
-	if(storage !== null) {
+	if(storage !== null && sections.length > 0) {
 		activeStep.classList.remove(VISIBLE_STEP_CLASS);
 		activeStep = sections[storage];
 		activeStep.classList.add(VISIBLE_STEP_CLASS);
