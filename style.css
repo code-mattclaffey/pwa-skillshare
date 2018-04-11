@@ -54,7 +54,8 @@ h2 {
 	max-width: 360px;
 }
 
-.pwa-btn {
+.pwa-btn,
+.background-sync__submit {
 	color: #FFF;
 	height: 45px;
 	border: none;
@@ -72,7 +73,9 @@ h2 {
 }
 
 .pwa-btn:hover,
-.pwa-btn:focus {
+.pwa-btn:focus,
+.background-sync__submit:hover,
+.background-sync__submit:focus {
 	border: none;
 	transform: translate(0,5px);
 	-webkit-transform: translate(0,5px);
@@ -113,4 +116,22 @@ h2 {
 .tests {
 	padding-left: 0;
 	list-style: none;
+}
+
+.background-sync {
+	max-width: 360px;
+}
+
+.background-sync__label {
+	display: block;
+	font-size: 22px;
+	line-height: 26px;
+	font-weight: bold;
+	margin-bottom: 6px;
+}
+
+.background-sync__input {
+	display: block;
+	padding: 6px 12px;
+	margin-bottom: 16px;
 }

@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "localhost ./"
+    "start": "browser-sync start --server --no-ghost-mode"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "localhost": "^0.2.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.23.6"
   }
 }
