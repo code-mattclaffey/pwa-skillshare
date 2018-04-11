@@ -7,6 +7,11 @@
 		<title>PWA Kata</title>
 		<meta name="description" content="PWA Kata">
 		<link href="/style.css" type="text/css" rel="stylesheet">
+		<link rel="manifest" href="/manifest.json">
+		<meta name="theme-color" content="#304ffe">
+		<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
 	</head>
 	<body>
 		<div class="grid">
@@ -36,5 +41,19 @@
 			</div>
 		</div>
 		<script src="/main.js"></script>
+		<script>
+
+			/*
+				STEP 2 - REGISTER SERVICE WORKER
+
+				this is the initial check for the service worker. It HAS to be in the root of the domain so the scope of the service worker can access all urls.
+				if it is in /scripts/sw.js then it will only look for urls within the scope of that domain.
+
+				- firstly we need to check if serviceWorker exists in the navigator. 'propertyName' in navigator
+				- then navigator.serviceWorker.register('/sw.js')
+				- this will return a promise. Console log 'Service worker registered', parameterName
+				- Remember to catch the promise incase there is any errors.
+			*/
+		</script>
 	</body>
 </html>

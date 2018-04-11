@@ -45,7 +45,6 @@
 					testCase(data.hasOwnProperty('short_name'), 'Manifest does not have a short name property'),
 					testCase(data.hasOwnProperty('name'), 'Manifest does not contain a name property'),
 					testCase(data.hasOwnProperty('icons'), 'Manifest does not contain a icons property'),
-					testCase(data.hasOwnProperty('icons'), 'Manifest does not contain a icons property'),
 					testCase(icons.length === 7, 'You need icon sizes of 48, 72, 96, 144, 168, 192, 512 in your icons property array'),
 					testCase(data.hasOwnProperty('start_url'), 'Manifest does not contain a start_url property'),
 					testCase(data.start_url.includes('?utm_source=homescreen'), 'Start url does not have a utm source of homescreen'),
@@ -70,7 +69,7 @@
 
 						tests.innerHTML = inValidTests.map(test => {
 							return `<li class="test__item">${test}</li>`;
-						}).join();
+						}).join('');
 
 					}
 				})
@@ -96,4 +95,29 @@
 	}
 
 	buttons.forEach(button => button.addEventListener('click', checkIfTheStepPasses));
+}());
+
+(function() {
+	'use strict';
+
+	/*
+
+		STEP 3.1 - Setup Sync Event & request permission for Notificaions
+
+		We need to register the sync event when the user has clicked the button
+
+		- bind a click event to the prder pizza button. Name the function anything you want.
+		- navigator.serviceWorker.ready will be a promise, so we need to return the then function with the reg paramter
+			- next we need to check if the reg has a property call ** sync **
+				- reg.sync.register('any-name-here') which is a promise.
+					- THEN console.log('Sync registered')
+					- catch the error.
+			- else console log sync not supported.
+	*/
+
+		const button = document.querySelector('[data-background-sync]');
+
+		if(button !== null) {
+			// do some event binding here
+		}
 }());
