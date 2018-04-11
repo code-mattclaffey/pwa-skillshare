@@ -45,7 +45,6 @@
 					testCase(data.hasOwnProperty('short_name'), 'Manifest does not have a short name property'),
 					testCase(data.hasOwnProperty('name'), 'Manifest does not contain a name property'),
 					testCase(data.hasOwnProperty('icons'), 'Manifest does not contain a icons property'),
-					testCase(data.hasOwnProperty('icons'), 'Manifest does not contain a icons property'),
 					testCase(icons.length === 7, 'You need icon sizes of 48, 72, 96, 144, 168, 192, 512 in your icons property array'),
 					testCase(data.hasOwnProperty('start_url'), 'Manifest does not contain a start_url property'),
 					testCase(data.start_url.includes('?utm_source=homescreen'), 'Start url does not have a utm source of homescreen'),
@@ -70,7 +69,7 @@
 
 						tests.innerHTML = inValidTests.map(test => {
 							return `<li class="test__item">${test}</li>`;
-						}).join();
+						}).join('');
 
 					}
 				})
