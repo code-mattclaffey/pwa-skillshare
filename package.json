@@ -4,14 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "browser-sync start --server --no-ghost-mode"
+		"start": "localhost ./build",
+    "deploy": "now ./build"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "browser-sync": "^2.23.6"
+    "localhost": "^0.2.3",
+    "now": "^11.1.4"
   }
 }
