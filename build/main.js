@@ -7,10 +7,18 @@
 	let activeStep = sections[0];
 
 	const tests = {
-		manifest: testManifest
+		manifest: testManifest,
+		now: now
 	};
 
 	const buttons = Array.prototype.slice.call(document.querySelectorAll('[data-test-btn]'));
+
+	function now() {
+		activeStep.classList.remove(VISIBLE_STEP_CLASS);
+		activeStep = sections[1];
+		localStorage.setItem('currentSection', 1);
+		activeStep.classList.add(VISIBLE_STEP_CLASS);
+	}
 
 	function testCase(condition, errorMessage) {
 		return new Promise((resolve, reject) => {
@@ -32,6 +40,12 @@
 		request.open('GET', '/manifest.json', true);
 
 		request.onload = function() {
+			if(request.status === 404) {
+				const tests = activeStep.querySelector('[data-test-errors]');
+
+				tests.innerHTML = `<li class="test__item">Unable to find manifest.json</li>`;
+			}
+
 			if (request.status >= 200 && request.status < 400) {
 
 				var data = JSON.parse(request.responseText);
@@ -61,7 +75,7 @@
 
 					if(inValidTests.length === 0) {
 						activeStep.classList.remove(VISIBLE_STEP_CLASS);
-						activeStep = sections[1];
+						activeStep = sections[2];
 						localStorage.setItem('currentSection', 1);
 						activeStep.classList.add(VISIBLE_STEP_CLASS);
 					} else {
@@ -73,7 +87,9 @@
 
 					}
 				})
-				.catch(error => new Error(error));
+				.catch(error => {
+					new Error(error);
+				});
 			};
 		}
 
@@ -102,7 +118,7 @@
 
 	/*
 
-		STEP 3.1 - Setup Sync Event & request permission for Notificaions
+		STEP 4.1 - Setup Sync Event & request permission for Notificaions
 
 		We need to register the sync event when the user has clicked the button
 

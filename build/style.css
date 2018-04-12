@@ -8,8 +8,8 @@ body {
 	background: #fff;
 	font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
 	color: #000;
-	font-size: 16px;
-	line-height: 24px;
+	font-size: 20px;
+	line-height: 30px;
 }
 
 .grid__block {
@@ -134,4 +134,26 @@ h2 {
 	display: block;
 	padding: 6px 12px;
 	margin-bottom: 16px;
+}
+
+a {
+	color: #304ffe;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover,
+a:focus {
+	text-decoration: underline;
+}
+
+
+::-moz-selection { /* Code for Firefox */
+	color: #000;
+	background-color: #fff176;
+}
+
+::selection {
+	color: #000;
+	background-color: #fff176;
 }

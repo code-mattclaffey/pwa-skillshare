@@ -27,7 +27,7 @@ function showNotification() {
 
 /*
 
-	STEP 2.1 - INSTALL EVENT
+	STEP 3.1 - INSTALL EVENT
 
 	The install event listener will open up the cache and puts all the urls specified in the cacheFiles into the cache storage.
 
@@ -51,7 +51,7 @@ function showNotification() {
 
 /*
 
-	STEP 2.2 - ACTIVATE EVENT
+	STEP 3.2 - ACTIVATE EVENT
 
 	What this function will need to do is to loop through all of the caches and if the cache name does not equal your
 	cache name it will be deleted from the cache.
@@ -83,7 +83,7 @@ function showNotification() {
 
 /*
 
-	STEP 2.3 - FETCH EVENT
+	STEP 3.3 - FETCH EVENT
 
 	When the service worker is installed and the user comes to the site for a second time the service worker will handle the fetch requests on the site.
 	Every time a request comes through the service worker will check the cache to see if it exists and if it doesnt then it will fetch that asset from the server.
@@ -118,7 +118,7 @@ function showNotification() {
 
 /*
 
-	Step 3.3 - Background Syncing (Notification Click Event)
+	Step 4.3 - Background Syncing (Notification Click Event)
 
 	background sync allows you to sync data to sthe service worker when a user is offline and then fire a sync event when the user has come back online.
 

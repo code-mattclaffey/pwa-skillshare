@@ -21,21 +21,34 @@
 			<div class="grid__block">
 				<main class="content">
 					<h1>PWA Kata</h1>
-					<p>An introduction in building your first PWA web app. Shall we start?</p>
 					<div class="step step--visible" data-test-section>
-						<h2>Step One - Build a manifest.json</h2>
+							<h2>Step One - Get this deployed on <a href="https://zeit.co/now" target="_blank">Now - Realtime Global Deployments</a></h2>
+
+							<p>An introduction in building your first PWA web app. Shall we start?</p>
+
+							<p>We need to be able to deploy our app to a domain with https so we can test our PWA application. Also its nice just to see the expierence work on a phone. You will need to start deploying your app from step three.</p>
+
+							<p>Setting up an account is free. Each time you deploy the url is a different url so copy the one thats in the commanline once you've ran <b>npm run deploy</b>.</p>
+
+							<button type="button" class="pwa-btn" data-test-btn="now">I am setup</button>
+						</div>
+					<div class="step" data-test-section>
+						<h2>Step Two - Build a manifest.json</h2>
 
 						<p>A manifest is the first thing you need to do when building a PWA. When the user adds your website to the homescreen of their device, the manifest communicates to the device telling them how the website should display & what icon should be shown to the user on the homescreen/splash page. <a href="https://developer.mozilla.org/en-US/docs/Web/Manifest" target="_blank">How to build a web app manifest</a></p>
+
+						<p>In the example above it tells you to save the file as a <b>.webmaniefest</b> you can use <b>.json</b> too which is what we are using in this example.</p>
+
 						<ul class="tests" data-test-errors>
 						</ul>
 						<button type="button" class="pwa-btn" data-test-btn="manifest">Check Manifest</button>
 					</div>
 					<div class="step" data-test-section>
-						<h2>Step Two - Offline Page</h2>
+						<h2>Step Three - Offline Page</h2>
 						<p>We now have a manifest in place! Now lets get started on building an offline page. What I want you to do is cache '/offline/', 'main.js', 'style.css', 'pwa-lighthouse'. Once done, disconnect your wifi to check if your service worker redirects you to your offline page.
 							<a href="https://deanhume.com/create-a-really-really-simple-offline-page-using-service-workers/" target="_blank">Create a simple offline page</a>
 						</p>
-						<p>Once done turn off your wifi to continue</p>
+						<p>Once done turn off your wifi to continue (make sure you have turned off the mobile data too.)</p>
 					</div>
 				</main>
 			</div>
@@ -44,7 +57,7 @@
 		<script>
 
 			/*
-				STEP 2 - REGISTER SERVICE WORKER
+				STEP 3 - REGISTER SERVICE WORKER
 
 				this is the initial check for the service worker. It HAS to be in the root of the domain so the scope of the service worker can access all urls.
 				if it is in /scripts/sw.js then it will only look for urls within the scope of that domain.
