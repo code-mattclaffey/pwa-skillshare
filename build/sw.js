@@ -105,12 +105,11 @@ self.addEventListener('sync', function (event) {
 });
 
 self.addEventListener('notificationclick', function (event) {
-	var url = 'http://localhost:8080';
 
 	if(event.notification.actions.filter(type => type.action === 'view-order').length > 0) {
 
 		var promise = new Promise(function(resolve) {
-			return clients.openWindow(url + '/background-sync/passed/');
+			return clients.openWindow('/background-sync/passed/');
 		})
 		.catch((error) => {
 				console.error(error);
