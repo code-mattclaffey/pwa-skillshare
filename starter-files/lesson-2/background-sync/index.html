@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>PWA Kata</title>
+		<meta name="description" content="PWA Kata">
+		<link href="/style.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="grid">
+			<div class="grid__block" style="background-color: #304ffe;">
+				<img src="/pwa-lighthouse.png" class="logo" alt="logo"/>
+			</div>
+			<div class="grid__block">
+				<main class="content">
+					<h1>Background Sync</h1>
+
+					<p>Now that we are on a roll let's try out some background syncing & push notifications. Sometimes the user just wants to do a quick task such as ordering pizza where they will take their phone out of pocket, order some takeaway as they go home and then puts the phone away.</p>
+
+					<p>Oh wait! As the user puts their phone away they lose a connection which means their order may not have gone through. We have all been in that situation where we have a faulty connection as we are on the go doing our day to day tasks & it can be really annoying!</p>
+
+					<p>Background sync is perfect for this because it will wait until we have a connection again and then it will send that data to the endpoint it is meant to be going to. If the user performs a task where it has to go back to there server the request can get stored in the background so it updates when the user gets connection again. <a href="https://dbwriteups.wordpress.com/2015/11/16/service-workers-part-4-background-sync/" target="_blank">Service Workers – Part 4 – Background Sync</a></p>
+
+					<button type="button" class="background-sync__submit" data-background-sync>Order Pizza</button>
+				</main>
+			</div>
+		</div>
+		<script src="/main.js"></script>
+		<script>
+
+			if('serviceWorker' in navigator) {
+				navigator.serviceWorker.register('/sw.js')
+				.then(function(reg) {
+					console.log('Service worker registered', reg);
+				})
+				.catch(function(err) {
+					console.log('Error registering service worker', err);
+				});
+			}
+
+			function registerOneTimeSync() {
+				navigator.serviceWorker.ready.then(function(reg) {
+					if (reg.sync) {
+						new Promise(function(resolve, reject) {
+							Notification.requestPermission(function(result) {
+								if(result !== 'granted') return reject(Error('Denied notification'));
+								resolve();
+							})
+							.then(function() {
+								return reg.sync.register('sync-test');
+							})
+							.then(function() {
+								console.log('Sync request registered');
+							})
+							.catch(function() {
+								console.log('Failed');
+							});
+						});
+					} else {
+						console.log('Sync not supported');
+					}
+				});
+			}
+
+			const button = document.querySelector('[data-background-sync]');
+			button.addEventListener('click', registerOneTimeSync);
+		</script>
+	</body>
+</html>

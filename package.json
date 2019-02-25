@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-		"start": "localhost ./build",
-    "deploy": "now ./build"
+		"start-l1": "localhost ./starter-files/lesson-1",
+    "deploy-l1": "now ./build",
+		"start-l2": "localhost ./starter-files/lesson-2",
+    "deploy-l2": "now ./starter-files/lesson-2"
   },
   "author": "",
   "license": "ISC",
