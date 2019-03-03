@@ -22,16 +22,16 @@
 				<main class="content">
 					<h1>PWA Kata</h1>
 					<div class="step step--visible" data-test-section>
-							<h2>Step One - Get this deployed on <a href="https://zeit.co/now" target="_blank">Now - Realtime Global Deployments</a></h2>
+						<h2>Step One - Get this deployed on <a href="https://zeit.co/now" target="_blank">Now - Realtime Global Deployments</a></h2>
 
-							<p>An introduction in building your first PWA web app. Shall we start?</p>
+						<p>An introduction in building your first PWA web app. Shall we start?</p>
 
-							<p>We need to be able to deploy our app to a domain with https so we can test our PWA application. Also its nice just to see the expierence work on a phone. You will need to start deploying your app from step three.</p>
+						<p>We need to be able to deploy our app to a domain with https so we can test our PWA application. Also its nice just to see the expierence work on a phone. You will need to start deploying your app from step three.</p>
 
-							<p>Setting up an account is free. Each time you deploy the url is a different url so copy the one thats in the commanline once you've ran <b>npm run deploy-l2</b>.</p>
+						<p>Setting up an account is free. Each time you deploy the url is a different url so copy the one thats in the commanline once you've ran <b>npm run deploy-l2</b>.</p>
 
-							<button type="button" class="pwa-btn" data-test-btn="now">I am setup</button>
-						</div>
+						<button type="button" class="pwa-btn" data-test-btn="now">I am setup</button>
+					</div>
 					<div class="step" data-test-section>
 						<h2>Step Two - Build a add to homescreen prompt</h2>
 
@@ -43,20 +43,54 @@
 						</ul>
 						<button type="button" class="pwa-btn" data-aths-prompt style="display: none;">Trigger Prompt</button>
 					</div>
+					<div class="step" data-test-section="indexDB">
+						<h2>Saving our form data into indexDB</h2>
+						<p>Awesome! You made it past the app install banner!</p>
+						<p>Next we are going to create a form which will save data and send it to the user when they become online again. This is going to be broken down into two sections where section one; we add our form data into indexDB and then two we post that data when we become online again.</p>
+
+						<!-- Deploy your server first -->
+						<p data-form-completed style="display: none;">Submission successfully submitted!</p>
+						<form action="https://nodejs-express-irsxprgxau.now.sh/save" method="POST">
+							<fieldset>
+								<legend>Your Name</legend>
+								<div>
+									<label for="first-name">First Name</label>
+									<input type="text" id="first-name" name="firstName" required/>
+								</div>
+								<div>
+									<label for="last-name">Last Name</label>
+									<input type="text" id="last-name" name="lastName" required/>
+								</div>
+								<button type="submit" class="pwa-btn">Send</button>
+							</fieldset>
+						</form>
+					</div>
 				</main>
 			</div>
 		</div>
-		<script src="/main.js"></script>
+		<script src="/main.js" defer></script>
 
 		<script>
 			if('serviceWorker' in navigator) {
 				navigator.serviceWorker.register('/sw.js')
-					.then(function(reg) {
-						console.log('Service worker registered', reg);
-					})
-					.catch(function(err) {
-						console.log('Error registering service worker', err);
-					});
+				.then(function(reg) {
+					console.log('Service worker registered', reg);
+				})
+				.catch(function(err) {
+					console.log('Error registering service worker', err);
+				});
+
+
+			/**********
+			 *
+			 *  STEP 2.5
+			 *
+			 * *********/
+
+			// we need to use the navigator.serviceWorker.ready which returns a promise with a registration parameter passed into the fucking.
+			// once passed we need to return registration.sync.register('sendFormData')
+			// we then need to use another .then to console log whether the sync has been registered or not. just a console log will do for now.
+			// finally we need to use .catch to console log the sync reg failed.
 			}
 		</script>
 	</body>

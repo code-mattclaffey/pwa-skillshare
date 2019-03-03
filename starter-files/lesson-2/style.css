@@ -48,10 +48,12 @@ h1 {
 	max-width: 360px;
 }
 
-h2 {
+h2,
+legend {
 	font-size: 22px;
 	line-height: 26px;
 	max-width: 360px;
+	font-weight: bold;
 }
 
 .pwa-btn,
@@ -156,4 +158,30 @@ a:focus {
 ::selection {
 	color: #000;
 	background-color: #fff176;
+}
+
+
+fieldset {
+	border: none;
+	padding: 0;
+	margin: 40px auto;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+input {
+	border-radius: 3px;
+	display: block;
+	height: 40px;
+	width: 100%;
+	-webkit-appearance: none;
+	border: 1px solid lightgrey;
+}
+
+fieldset > div {
+	margin-bottom: 20px;
+	margin-top: 10px;
 }
