@@ -12,6 +12,7 @@
   transition: background 150ms ease-in-out, color 150ms ease-in-out, box-shadow 150ms ease-in-out, transform 150ms ease-in-out;
   background-color: var(--colors-primary-dark);
   box-shadow: 0 6px 0 0 var(--colors-primary);
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -22,4 +23,5 @@
   -webkit-transform: translate(0, 5px);
   box-shadow: 0 1px 0 0;
   color: var(--colors-white);
+  text-decoration: none;
 }
