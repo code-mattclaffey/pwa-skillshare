@@ -3,7 +3,8 @@
   "version": "2.0.0",
   "description": "",
   "scripts": {
-    "start": "netlify dev",
+    "build": "eleventy",
+    "start": "eleventy --serve",
     "prettier:fix": "prettier \"./**/*\" --check --write",
     "prettier:check": "prettier \"./packages/**/*\" --check"
   },
@@ -11,7 +12,7 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "netlify-cli": "^2.68.0",
+    "@11ty/eleventy": "^0.11.1",
     "husky": "^4.3.0",
     "lint-staged": "^10.4.2",
     "prettier": "^2.1.2"

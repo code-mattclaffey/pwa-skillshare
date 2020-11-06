@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+---
+
+<h1>Background Sync</h1>
+
+<p>
+  Now that we are on a roll let's try out some background syncing &
+  push notifications. Sometimes the user just wants to do a quick task
+  such as ordering pizza where they will take their phone out of
+  pocket, order some takeaway as they go home and then puts the phone
+  away.
+</p>
+
+<p>
+  Oh wait! As the user puts their phone away they lose a connection
+  which means their order may not have gone through. We have all been
+  in that situation where we have a faulty connection as we are on the
+  go doing our day to day tasks & it can be really annoying!
+</p>
+
+<p>
+  Background sync is perfect for this because it will wait until we
+  have a connection again and then it will send that data to the
+  endpoint it is meant to be going to. If the user performs a task
+  where it has to go back to there server the request can get stored
+  in the background so it updates when the user gets connection again.
+  <a
+    href="https://dbwriteups.wordpress.com/2015/11/16/service-workers-part-4-background-sync/"
+    target="_blank"
+    >Service Workers – Part 4 – Background Sync</a
+  >
+</p>
+
+<button
+  type="button"
+  class="background-sync__submit"
+  data-background-sync
+>
+  Order Pizza
+</button>
+

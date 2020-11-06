@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PWA Kata</title>
+    <meta name="description" content="PWA Kata" />
+    <link href="/css/style.css" type="text/css" rel="stylesheet" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#304ffe" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/icons/favicon-16x16.png"
+    />
+  </head>
+  <body>
+    <div class="grid">
+      <div class="grid__block" style="background-color: #304ffe">
+        <img src="/images/pwa-lighthouse.png" class="logo" alt="Logo" />
+      </div>
+      <div class="grid__block">
+        <main class="content">
+          {{content | safe }}
+        </main>
+      </div>
+    </div>
+    <script src="/scripts/test-manifest.js" type="module" defer></script>
+  </body>
+</html>
