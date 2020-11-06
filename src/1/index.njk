@@ -3,7 +3,6 @@ layout: layouts/base.njk
 ---
 
 <h1>PWA Game</h1>
-<div class="step step--visible" data-test-section>
   <h2>Step Two - Build a manifest.json</h2>
 
   <p>
@@ -25,10 +24,9 @@ layout: layouts/base.njk
     are using in this example.
   </p>
 
-  <ul class="tests" data-test-errors></ul>
-  <button type="button" class="pwa-btn" data-test-btn="manifest">
+  <ul class="errors" data-test-errors></ul>
+  <button type="button" class="button" data-test-btn="manifest">
     Check Manifest
   </button>
-</div>
 <script src="/scripts/test-manifest.js" type="module" defer></script>
 

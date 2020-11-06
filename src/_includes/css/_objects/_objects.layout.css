@@ -1,0 +1,24 @@
+
+.grid__block {
+  width: 100%;
+}
+
+@media screen and (min-width: 960px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    height: 100vh;
+  }
+
+  .grid__block {
+    align-items: center;
+    display: flex;
+  }
+}
+
+.content {
+  padding: 40px;
+  max-width: 640px;
+  width: 100%;
+}

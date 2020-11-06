@@ -10,11 +10,17 @@
   },
   "author": "Matthew Claffey (mattclaffey93@gmail.com)",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
+    "cssnano": "^4.1.10",
     "husky": "^4.3.0",
     "lint-staged": "^10.4.2",
+    "postcss": "^8.1.6",
+    "postcss-import": "^13.0.0",
+    "postcss-preset-env": "^6.7.0",
     "prettier": "^2.1.2"
   },
   "browserslist": [

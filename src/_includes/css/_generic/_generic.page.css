@@ -1,0 +1,9 @@
+html {
+  font-family: "Avenir Next","Helvectica Neue",Arial,sans-serif,sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -1,0 +1,17 @@
+.background-sync {
+  max-width: 360px;
+}
+
+.background-sync__label {
+  display: block;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.background-sync__input {
+  display: block;
+  padding: 6px 12px;
+  margin-bottom: 16px;
+}

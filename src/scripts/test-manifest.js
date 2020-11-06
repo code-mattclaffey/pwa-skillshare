@@ -60,7 +60,7 @@ const validateManifest = (manifest) => {
 
   const invalidCases = testCases.filter((testCase) => {
     if (testCase[0]) {
-      return `<li class="test__item">${testCase[1]}</li>`;
+      return `<li class="errors__item">${testCase[1]}</li>`;
     }
   });
 
@@ -80,7 +80,7 @@ const validateRequest = (response) => {
 
 const handleError = () => {
   const errorContainer = document.querySelector("[data-test-errors]");
-  errorContainer.innerHTML = `<li class="test__item">Unable to find manifest.json please make sure it is in the root of build.</li>`;
+  errorContainer.innerHTML = `<li class="errors__item">Unable to find manifest.json please make sure it is in the root of build.</li>`;
 };
 
 const testManifest = () => {
