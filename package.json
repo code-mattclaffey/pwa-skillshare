@@ -1,24 +1,14 @@
 {
-  "name": "pwa-workshop",
-  "version": "1.0.0",
+  "name": "pwa-game",
+  "version": "2.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "start-l1": "localhost ./starter-files/lesson-1",
-    "deploy-l1": "now ./starter-files/lesson-1",
-    "deploy-l1-completed": "now ./completed/lesson-1",
-    "start-l2": "localhost ./starter-files/lesson-2",
-		"deploy-l2": "now ./starter-files/lesson-2",
-		"deploy-server": "now"
+    "start": "netlify dev"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.4"
-  },
+  "author": "Matthew Claffey (mattclaffey93@gmail.com)",
+  "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
-    "localhost": "^0.2.3",
-    "now": "^11.1.4"
+    "netlify-cli": "^2.68.0"
   }
 }

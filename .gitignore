@@ -1,2 +1,5 @@
 node_modules
 completed
+
+# Local Netlify folder
+.netlify
