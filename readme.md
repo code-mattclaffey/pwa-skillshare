@@ -12,6 +12,6 @@ I don't expect you to write every single line of code by yourself so I have adde
 
 📝 - Reading material
 🚧 - Area of the code where I have added some boilerplate but needs more work to get the job done.
-👷 - Bob the builder will give you the tools (hints) to what code needs to be written 
+👷 - Bob the builder will give you the tools (hints) to what code needs to be written
 💩 - Code smells that we need to remove
 📱 - When its time to test it in the browser

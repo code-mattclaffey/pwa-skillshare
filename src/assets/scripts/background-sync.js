@@ -13,8 +13,8 @@
 		- else console log sync not supported.
 */
 
-const button = document.querySelector('[data-background-sync]');
+const button = document.querySelector("[data-background-sync]");
 
-if(button !== null) {
-	// do some event binding here
+if (button !== null) {
+  // do some event binding here
 }

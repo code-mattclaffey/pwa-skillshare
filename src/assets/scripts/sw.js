@@ -1,26 +1,23 @@
 var cacheFiles = [
-	'/offline/',
-	'/background-sync/',
-	'main.js',
-	'style.css',
-	'pwa-lighthouse.png'
+  "/offline/",
+  "/background-sync/",
+  "main.js",
+  "style.css",
+  "pwa-lighthouse.png",
 ];
 
 var cachedVersion = 1;
-var cacheName = 'pwa-workshop-v' + cachedVersion;
-
+var cacheName = "pwa-workshop-v" + cachedVersion;
 
 function showNotification() {
-	const title = 'Pizza Order';
+  const title = "Pizza Order";
 
   const options = {
     body: `Your pizza order has gone through`,
-    icon: 'pwa-lighthouse.png',
-		badge: 'pwa-lighthouse.png',
-		actions: [
-			{ 'action': 'view-order', 'title': 'View Order'}
-		]
-	};
+    icon: "pwa-lighthouse.png",
+    badge: "pwa-lighthouse.png",
+    actions: [{ action: "view-order", title: "View Order" }],
+  };
 
   self.registration.showNotification(title, options);
 }
@@ -99,8 +96,6 @@ function showNotification() {
 		- Remember you need to catch any errors. For example if '/' does not exist in the cache we need to return caches.match('/offline/');
 */
 
-
-
 /*
 
 	Step 3.2 - Background Syncing (Sync Event)
@@ -114,7 +109,6 @@ function showNotification() {
 		- if the condition is met we want to wrap an event.waitUntil function around our  showNotification button.
 
 */
-
 
 /*
 
