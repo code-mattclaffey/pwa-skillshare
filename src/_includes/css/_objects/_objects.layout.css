@@ -45,7 +45,7 @@
     }
 
     to {
-      transform: rotate(45deg) scale(2) translate(-55%, 0);
+      transform: rotate(45deg) scale(2) translate(-55%, 10%);
     }
   }
 
@@ -112,7 +112,7 @@
   position: absolute;
   top: 0;
   transform: rotate(55deg) scale(2) translate(-70%, 0);
-  width: 120%;
+  width: 110%;
   z-index: -1;
 }
 
