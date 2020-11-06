@@ -112,7 +112,7 @@
   position: absolute;
   top: 0;
   transform: rotate(55deg) scale(2) translate(-70%, 0);
-  width: 100%;
+  width: 120%;
   z-index: -1;
 }
 
