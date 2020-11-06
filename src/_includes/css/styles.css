@@ -1,4 +1,5 @@
 @import 'normalize.css';
+@import "./_settings/_settings.colors.css";
 @import "./_generic/_generic.page.css";
 @import "./_generic/_generic.selection.css";
 @import "./_objects/_objects.layout.css";

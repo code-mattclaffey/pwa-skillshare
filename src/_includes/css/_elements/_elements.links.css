@@ -1,6 +1,5 @@
-
 a {
-  color: #304ffe;
+  color: var(--colors-primary);
   font-weight: bold;
   text-decoration: none;
 }

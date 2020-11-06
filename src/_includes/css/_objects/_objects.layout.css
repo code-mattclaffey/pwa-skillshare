@@ -1,24 +1,163 @@
+@keyframes swooush-left {
+  from {
+    transform: rotate(75deg) scale(2) translate(-100%, 0);
+  }
 
-.grid__block {
+  to {
+    transform: rotate(55deg) scale(2) translate(-70%, 0);
+  }
+}
+
+@keyframes swooush-right {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes swooush-left-exit {
+  from {
+    transform: rotate(55deg) scale(2) translate(-70%, 0);
+  }
+
+  to {
+    transform: rotate(75deg) scale(2) translate(-100%, 0);
+  }
+}
+
+@keyframes swooush-right-exit {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  @keyframes swooush-left {
+    from {
+      transform: rotate(45deg) scale(2) translate(-100%, 0);
+    }
+
+    to {
+      transform: rotate(45deg) scale(2) translate(-55%, 0);
+    }
+  }
+
+  @keyframes swooush-right {
+    from {
+      opacity: 0;
+      transform: translate(0%, 10%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translate(-15%, 10%);
+    }
+  }
+
+  @keyframes swooush-left-exit {
+    from {
+      transform: rotate(45deg) scale(2) translate(-55%, 0);
+    }
+
+    to {
+      transform: rotate(45deg) scale(2) translate(-100%, 0);
+    }
+  }
+
+  @keyframes swooush-right-exit {
+    from {
+      opacity: 1;
+      transform: translate(-15%, 10%);
+    }
+
+    to {
+      opacity: 0;
+      transform: translate(0%, 10%);
+    }
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.layout {
+  overflow-y: auto;
+  height: 100vh;
+  position: relative;
+}
+
+.js .layout {
+  animation: fade-in 0.2s 0.5s forwards;
+  opacity: 0;
+}
+
+.layout__shape {
+  height: 100%;
+  background-color: var(--colors-primary);
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: rotate(55deg) scale(2) translate(-70%, 0);
   width: 100%;
+  z-index: -1;
 }
 
-@media screen and (min-width: 960px) {
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    height: 100vh;
-  }
-
-  .grid__block {
-    align-items: center;
-    display: flex;
-  }
+.js .entrance .layout__shape {
+  animation: swooush-left 1.5s 0.5s forwards;
 }
 
-.content {
-  padding: 40px;
+.js .entrance .layout__content {
+  animation: swooush-right 1s 1.5s forwards;
+}
+
+.js .exit .layout__shape {
+  animation: swooush-left-exit 1.5s forwards;
+}
+
+.js .exit .layout__content {
+  animation: swooush-right-exit 1.5s forwards;
+}
+
+.layout__content {
+  padding: 20px;
   max-width: 640px;
   width: 100%;
+}
+
+@media screen and (min-width: 640px) {
+  .js .entrance .layout__shape {
+    transform: rotate(45deg) scale(2) translate(-55%, 0);
+  }
+
+  .layout__content {
+    padding: 40px;
+    transform: translate(-15%, 10%);
+  }
+
+  .layout__content-container {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    padding-left: 55%;
+    padding-top: 5%;
+  }
+
+  .js .entrance .layout__content {
+    opacity: 0;
+    transform: translate(0%, 10%);
+  }
 }

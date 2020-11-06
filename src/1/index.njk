@@ -2,31 +2,30 @@
 layout: layouts/base.njk
 ---
 
-<h1>PWA Game</h1>
-  <h2>Step Two - Build a manifest.json</h2>
+<h1>Building your own manifest.json file</h1>
 
-  <p>
-    A manifest is the first thing you need to do when building a PWA.
-    When the user adds your website to the homescreen of their device,
-    the manifest communicates to the device telling them how the
-    website should display & what icon should be shown to the user on
-    the homescreen/splash page.
-    <a
-      href="https://developer.mozilla.org/en-US/docs/Web/Manifest"
-      target="_blank"
-      >How to build a web app manifest</a
-    >
-  </p>
+<p>
+  A manifest is the first thing you need to do when building a PWA.
+  When the user adds your website to the homescreen of their device,
+  the manifest communicates to the device telling them how the
+  website should display & what icon should be shown to the user on
+  the homescreen/splash page.
+  <a
+    href="https://developer.mozilla.org/en-US/docs/Web/Manifest"
+    target="_blank"
+    >How to build a web app manifest</a
+  >
+</p>
 
-  <p>
-    In the example above it tells you to save the file as a
-    <b>.webmaniefest</b> you can use <b>.json</b> too which is what we
-    are using in this example.
-  </p>
+<p>
+  In the example above it tells you to save the file as a
+  <b>.webmaniefest</b> you can use <b>.json</b> too which is what we
+  are using in this example.
+</p>
 
-  <ul class="errors" data-test-errors></ul>
-  <button type="button" class="button" data-test-btn="manifest">
-    Check Manifest
-  </button>
+<ul class="errors" data-test-errors></ul>
+<button type="button" class="button" data-test-btn="manifest">
+  Check Manifest
+</button>
 <script src="/scripts/test-manifest.js" type="module" defer></script>
 

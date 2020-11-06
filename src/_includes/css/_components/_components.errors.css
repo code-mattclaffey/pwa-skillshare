@@ -1,14 +1,13 @@
-
 .errors {
   padding-left: 0;
   list-style: none;
 }
 
 .errors__item {
-  background: hsla(0, 4%, 5%, 0.05);
-  border-radius: 3px;
-  color: #e64a1a;
-  font-weight: bold;
+  background: var(--colors-pale);
+  border-radius: 20px;
+  color: var(--colors-validation);
+  font-weight: 600;
   margin-bottom: 20px;
   padding: 20px;
 }

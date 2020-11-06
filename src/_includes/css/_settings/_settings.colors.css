@@ -1,0 +1,8 @@
+:root {
+  --colors-primary: #cabdf4;
+  --colors-primary-dark: #8a78c2;
+  --colors-white: #ffffff;
+  --colors-body: #222222;
+  --colors-pale: hsla(0, 4%, 5%, 0.05);
+  --colors-validation: #e64a1a;
+}
