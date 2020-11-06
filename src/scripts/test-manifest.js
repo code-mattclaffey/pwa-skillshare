@@ -7,6 +7,7 @@ const validateManifest = (manifest) => {
       icon.sizes === "144x144" ||
       icon.sizes === "168x168" ||
       icon.sizes === "192x192" ||
+      icon.sizes === "384x384" ||
       icon.sizes === "512x512"
     );
   });
@@ -41,6 +42,10 @@ const validateManifest = (manifest) => {
       "Manifest does not exist in the dom. You need a meta tag with the rel attribute to be manifest & href to the file.",
     ],
     [
+      document.querySelector('meta[name="theme-color"]') !== null,
+      "We still need a meta tag adding to the base.njk file called theme-color",
+    ],
+    [
       manifest.hasOwnProperty("display"),
       "Manifest does not contain a display property. This defines the developers preferred display mode for the web application.",
     ],
@@ -67,7 +72,11 @@ const validateManifest = (manifest) => {
   if (invalidCases.length > 0) {
     const errorContainer = document.querySelector("[data-test-errors]");
     errorContainer.innerHTML = invalidCases.join("");
+    return
   }
+
+  document.querySelector('[data-section-name="test-manifest"]').setAttribute('aria-hidden', 'true')
+  document.querySelector('[data-section-name="test-manifest-valid"]').setAttribute('aria-hidden', 'false')
 };
 
 const validateRequest = (response) => {

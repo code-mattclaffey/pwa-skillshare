@@ -14,6 +14,6 @@ const animateOut = (e) => {
   }, 1250);
 }
 
-Array.from(document.querySelectorAll('a')).forEach(anchor => {
+Array.from(document.querySelectorAll('a:not([target])')).forEach(anchor => {
   anchor.addEventListener('click', animateOut);
 })

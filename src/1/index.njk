@@ -2,30 +2,39 @@
 layout: layouts/base.njk
 ---
 
-<h1>Building your own manifest.json file</h1>
+<h1>Getting those lighthouse checks ticked off</h1>
 
-<p>
-  A manifest is the first thing you need to do when building a PWA.
-  When the user adds your website to the homescreen of their device,
-  the manifest communicates to the device telling them how the
-  website should display & what icon should be shown to the user on
-  the homescreen/splash page.
-  <a
-    href="https://developer.mozilla.org/en-US/docs/Web/Manifest"
-    target="_blank"
-    >How to build a web app manifest</a
-  >
-</p>
+<p>Lighthouse is a really useful tool that allows us to see how good our application is running. They have a really good PWA checker that allows us to see what we need to do to make our application PWA friendly.</p>
 
-<p>
-  In the example above it tells you to save the file as a
-  <b>.webmaniefest</b> you can use <b>.json</b> too which is what we
-  are using in this example.
-</p>
+<p>Let's warm ourselves into it by getting the easy stuff boxed off. To find lighthouse, open devtools and select it from the panel. If its not there, there is a <a href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en" target="_blank" rel="norefferer nofollow">📝 chrome extension</a> that allows you to test from the browsers ui.</p>
 
-<ul class="errors" data-test-errors></ul>
-<button type="button" class="button" data-test-btn="manifest">
-  Check Manifest
-</button>
-<script src="/scripts/test-manifest.js" type="module" defer></script>
+<div data-section-name="test-manifest"  aria-hidden="false">
+  <h2>Adding meta data to our layout</h2>
 
+  <p>In the base.njk layout file we need to add a few meta tags. Our fellow friend <abbr title="Bob">👷 </abbr> will assist you getting the right tags in place.</p>
+
+  <h2>Building your own manifest.json file</h2>
+
+  <p>
+    Next we need to start telling the browser information about our application. To do this we need a manifest that gives the browser options which will be use when the user installs the application to their homescreen.
+    <a
+      href="https://web.dev/add-manifest/"
+      target="_blank"
+      rel="norefferer nofollow"
+      >📝 How to build a web app manifest</a
+    >
+  </p>
+
+  <ul class="errors" role="alert" data-test-errors></ul>
+
+  <button type="button" class="button" data-test-btn="manifest">
+    Check Manifest
+  </button>
+</div>
+
+<div data-section-name="test-manifest-valid" aria-hidden="true">
+  <h2>You did it!!</h2>
+  <img loading="lazy" src="https://media4.giphy.com/media/L1Wh7AY9XeZ8Yi7XXJ/giphy.webp?cid=ecf05e47sqk8hak2qhdgtnarpjy10hhapqhicltwz7xka905&rid=giphy.webp" alt="You are awesome gif" />
+  <p>Amazing! So now you should see a lot more green in the lighthouse scores for the pwa. Let's now get it green across the board. Let's go offline...</p>
+  <a href="/2" class="button">Next - Going offline</a>
+</div>

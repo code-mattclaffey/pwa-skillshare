@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>PWA Kata</title>
     <meta name="description" content="PWA Kata" />
 
@@ -17,13 +16,15 @@
     </script>
 
     <link href="/css/styles.css" type="text/css" rel="stylesheet" />
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="theme-color" content="#304ffe" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/images/icons/apple-touch-icon.png"
-    />
+
+    {# 💬 - PWA's need this meta tag too but I have added it in so our site is responsive :) #}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {# 👷 - We need add a link reference to find our manifest.json file #}
+    {# 👷 - we need to add a meta tag with the name of theme-color and content with the color #8a78c2  #}
+    {# 👷 - we need to add a link tag with the rel of applica-touch-icon, sizes of 180x180 and href = /images/icons/apple-touch-icon.png  #}
+    {# 📱 - run lighthouse when completed #}
+
     <link
       rel="icon"
       type="image/png"

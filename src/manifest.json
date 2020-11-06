@@ -1,0 +1,15 @@
+// 👷 Bob wants use to create a json object which has the following set:
+// start_url - pointing to /?utm_source=homescreen
+// 💬 - utm_source is something that is not require but really good for filtering your users that have come from the homescreen
+// display - standalone
+// 💬 - standalone means that when the user opens the device from their homescreen they won't see the browser features it will purely be the application.
+// short_name - PWA Game
+// name - PAW Game
+// theme_color - #8a78c2
+// background_color - #8a78c2
+// icons
+// 👷 - these need to be in an array of objects like = { "src": "/icons/android-icon-72x72.png", "sizes": "72x72", "type": "image/png", "purpose": "any maskable" }
+// We need icons for "48x48", "72x72", "96x96", "144x144", "168x168", "192x192", "384x384", "512x512"
+// 💬 - the urls for our icons is /images/icons/icons--the-size.png
+// 📱 - run lighthouse when completed
+{}

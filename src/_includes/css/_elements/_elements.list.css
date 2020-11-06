@@ -1,0 +1,9 @@
+ul,
+ol {
+  padding-left: 1em;
+}
+
+ul li,
+ol li {
+  margin-bottom: 5px;
+}

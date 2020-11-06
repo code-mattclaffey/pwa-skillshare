@@ -10,7 +10,6 @@
   font-weight: 600;
   padding: 8px 35px;
   text-align: center;
-  line-height: 19px;
   transition: background 150ms ease-in-out, color 150ms ease-in-out, box-shadow 150ms ease-in-out, transform 150ms ease-in-out;
   background-color: var(--colors-primary-dark);
   box-shadow: 0 6px 0 0 var(--colors-primary);
