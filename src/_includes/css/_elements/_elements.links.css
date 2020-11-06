@@ -1,7 +1,12 @@
 a {
-  color: var(--colors-primary);
+  color: var(--colors-primary-dark);
   font-weight: bold;
   text-decoration: none;
+}
+
+a:visited {
+  color: var(--colors-primary-dark);
+  text-decoration: underline;
 }
 
 a:hover,

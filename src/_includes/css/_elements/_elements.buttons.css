@@ -17,6 +17,13 @@
   cursor: pointer;
 }
 
+@media (max-width: 375px) {
+  .button {
+    display: block;
+    width: 100%;
+  }
+}
+
 .button:hover,
 .button:focus {
   border: none;

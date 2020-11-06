@@ -8,3 +8,7 @@ html {
 * {
   box-sizing: border-box;
 }
+
+abbr[title] {
+  text-decoration: none;
+}
